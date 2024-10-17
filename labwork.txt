@@ -1,0 +1,213 @@
+ import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      backgroundColor: Colors.white, // Set background color to white
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween, // Distributes space between containers
+          children: [
+            CircleAvatar(
+              radius: 20,
+              backgroundColor: Colors.black,
+            ),
+            Container(
+              padding: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.grey,
+              ),
+              child: Text(
+                "Add new Plan",
+                style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 13,
+                    color: Colors.white),
+              ),
+            ),
+          ],
+        ),
+      ),
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              "Always Be In Touch",
+              style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 20,
+                  color: Colors.black),
+            ),
+            // Card 1
+            Card(
+              color: Colors.purple,
+              margin: EdgeInsets.all(10),
+              child: Padding(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        // Container for Title
+                        Container(
+                          child: Text(
+                            "AT&T",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 16,
+                                color: Colors.black),
+                          ),
+                        ),
+                        SizedBox(width: 20),
+                        // Container for Subtitle
+                        Container(
+                          child: Text(
+                            "Mexico",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 16,
+                                color: Colors.black),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10), // Space between rows
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        // Container with ListTile
+                         Expanded(    //i used the expanded instaed of container because the container makes error through using it and the design dose not fit well and Frankly, in this part, I used GPT to know how to solve this problem. 
+                          child: ListTile(
+                            title: Text(
+                              "2GB/Min",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 17,
+                                color: Colors.black,
+                              ),
+                            ),
+                            subtitle: Text(
+                              "20GB | Valid for 24 Days",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 17,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 20), // Space between ListTile and price
+                        // Container for Price
+                        Container(
+                          child: Text(
+                            "\$32.10", // Corrected decimal separator
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 20,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            
+            //card2
+            
+   Card(
+              color: Colors.blue,
+              margin: EdgeInsets.all(10),
+              child: Padding(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        // Container for Title
+                        Container(
+                          child: Text(
+                            "AT&T",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 16,
+                                color: Colors.black),
+                          ),
+                        ),
+                        SizedBox(width: 20),
+                        // Container for Subtitle
+                        Container(
+                          child: Text(
+                            "Mexico",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 16,
+                                color: Colors.black),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10), // Space between rows
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        // Container with ListTile
+                         Expanded(    //i used the expanded instaed of container because the container makes error through using it and the design dose not fit well and Frankly, in this part, I used GPT to know how to solve this problem. 
+                          child: ListTile(
+                            title: Text(
+                              "2GB/Min",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 17,
+                                color: Colors.black,
+                              ),
+                            ),
+                            subtitle: Text(
+                              "20GB | Valid for 24 Days",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 17,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 20), // Space between ListTile and price
+                        // Container for Price
+                        Container(
+                          child: Text(
+                            "\$32.10", // Corrected decimal separator
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 20,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            
+          ],
+        ),
+      ),
+    ),
+  ));
+}
+
+
+
+
+
+
+
+  
